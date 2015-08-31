@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.0'
 
 gem 'rails', '4.2.1'
 
@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'devise', '~> 3.4.1'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'paperclip', github: 'thoughtbot/paperclip'
 
 group :development, :test do 
 	gem 'sqlite3'
