@@ -4,8 +4,8 @@ class PinsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
-    @pins = Pin.all
-  end
+   @pins = Pin.all.order("created_at DESC")
+ end
 
   def show
   end
@@ -50,7 +50,6 @@ class PinsController < ApplicationController
       redirect_to pins_path, notice: "Not authorized to edit this pin" if @pin.nil?
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def pin_params
       params.require(:pin).permit(:description, :image)
     end
